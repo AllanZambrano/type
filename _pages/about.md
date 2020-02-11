@@ -1,11 +1,26 @@
 ---
 layout: page
 title: About
-image: '/images/pages/about.jpeg'
 ---
 
-You love Minimalism, and you also love writing, Type is designed for you. Type focus on showing your content in a clean and simple way, focus on images, typography, and white space.
+Hi, my name is Allan Zambrano. PEC-G Student & software developer wannabe, currently living in Brazil.
+At the moment i'm undergoing my studies in Mechanical Engineering in UNESP. I started this website
+as a place to document everything I learn on a daily basis, troubleshooting, sysadmin, programming or even life. The idea is to create some guides for future reference and create the habit of documenting everything.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 
-Lorem ipsum dolor sit amet, vix ut case porro facilisis, alia possit neglegentur vis te. Has cu eirmod abhorreant, vel civibus efficiantur cu. Eu summo elitr vix, iusto putant maluisset per ut, ne etiam vivendum adipisci vel. Vis omnis tempor accusam ei, justo perpetua liberavisse cu qui. Saperet aliquando adipiscing ius ne, ne facer euripidis est. Pro mundi nostrum suavitate et.
+## Technologies:
+* Python
+* Django
+* geoDjango
+* Heroku
+* PostgreSQL
+* Jekyll 
+
+## Interests:
+* MusicGuitar
+* Automation
+* AI
+* Running
+* Hiking
+* Traveling
+* Reading
