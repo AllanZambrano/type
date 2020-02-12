@@ -10,7 +10,7 @@ title:       Allan Zambrano
 email:       'allazambrano@gmail.com'
 description: 'Web Developer'
 baseurl:     '' # The subpath of your site, e.g. /blog
-url:         'https://allanzambrano.com' # The base hostname & protocol for your site
+url:         '' # The base hostname & protocol for your site
 github:      'https://github.com/AllanZambrano'
 
 markdown:  kramdown
