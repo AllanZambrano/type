@@ -42,4 +42,4 @@ defaults:
   - scope:
       path: '_pages'
     values:
-      permalink: /:basename
+      permalink: /:basename/
