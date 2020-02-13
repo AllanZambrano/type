@@ -2,6 +2,7 @@
 layout: post
 title: Serving static & media files on Heroku
 tags: [frontpage, django]
+comments: true
 ---
 The whole problem that I got while deploying my app, as mentioned before, was serving both static and media files, whenever I upload a new version of the code my images are deleted since they are save on the project folder.
 

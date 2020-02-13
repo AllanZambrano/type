@@ -28,9 +28,9 @@ layout: default
         </div>
 
         <hr>
-
-        {% include disqus.html %}
-
+        {% if page.comments %} 
+          {% include disqus.html %}
+        {% endif %}
       </article>
     </div>
   </div>

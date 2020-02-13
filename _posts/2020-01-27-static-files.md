@@ -2,6 +2,7 @@
 layout: post
 title: Managing Static Files on Production
 tags: [frontpage, django]
+comments: true
 ---
 
 So today was kinda frustrating, today I learned that Heroku filesystem is ephemeral - that means that any changes to the filesystem whilst the dyno is running only last until that dyno is shut down or restarted. Each dyno boots with a clean copy of the filesystem from the most recent deploy. This is similar to how many container based systems, such as Docker, operate.
