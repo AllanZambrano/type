@@ -12,4 +12,5 @@ This is just a small list of things to improve on the site.
 * Add picture in about section.
 * Get a better text font. 
 * Add favicon.
-* Improve site title
+* Improve site title.
+* Add Google Analytics.
