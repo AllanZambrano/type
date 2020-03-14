@@ -23,7 +23,6 @@ collections:
 
   - name: 'pages'
     label: 'Pages'
-    folder: "_pages"
     editor:
       preview: false
     files:
