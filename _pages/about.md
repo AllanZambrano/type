@@ -17,7 +17,8 @@ as a place to document everything I learn on a daily basis, troubleshooting, sys
 * Jekyll 
 
 ## Interests:
-* MusicGuitar
+* Music
+* Guitar
 * Automation
 * AI
 * Running
