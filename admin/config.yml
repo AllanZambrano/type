@@ -36,19 +36,6 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
 
-  - name: 'pages'
-    label: 'Pages'
-    editor:
-      preview: false
-    files:
-      - label: 'About Page'
-        name: 'about'
-        file: 'about.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
-          - { label: 'Layout', name: 'title', widget: 'hidden', default: 'pages' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-
   - name: 'project'
     label: 'Project'
     folder: "_projects"
