@@ -23,30 +23,15 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Link, name: link, widget: string}
-  - name: "post"
-    label: "Post" 
-    folder: "_posts"
-    create: true 
+  
+  - name: "post" # Used in routes, e.g., /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, e.g., "New Post"
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path: {{ site.baseurl }}/{{slug}}
-    fields: 
+    fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-
-  - name: 'project'
-    label: 'Project'
-    folder: "_projects"
-    create: true
-    slug: "{{slug}}"
-    preview_path: {{ site.baseurl }}/{{slug}}
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "project"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "URL", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
