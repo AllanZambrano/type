@@ -19,14 +19,18 @@ For this example we will crawl some CoronaVirus Trackers.
 
 First of all we'll need to install and create a new project using scrapy, if you don't know how to install it just follow this [installation guide](http://doc.scrapy.org/en/latest/intro/install.html). There's a pretty cool [tutorial](http://doc.scrapy.org/en/latest/intro/tutorial.html) as well that shows you the basic.
 
-## scrapy-djangoitem
-We will need to install the following extension that allows you to define Scrapy items using existing Django models. More details on their [GitHub Page](https://github.com/scrapy-plugins/scrapy-djangoitem).
+## Extention: scrapy-djangoitem
+
+We will need to install the following extension that allows you to define Scrapy items using existing Django models. More details on their [GitHub](https://github.com/scrapy-plugins/scrapy-djangoitem).
+
 ```cmd
 pip install scrapy-djangoitem
 ```
 
 ## Django Model
+
 First of all, let's create a new model for the crawled data. 
+
 ```python
 # models.py
 from django.db import models
@@ -44,7 +48,9 @@ class Covid(models.Model):
     def __str__(self):
         return self.country
 ```
+
 And now just add the model to the admin.
+
 ```python
 #admin.py
 from django.contrib import admin
@@ -54,10 +60,13 @@ admin.site.register()
 ```
 
 ## Let's create a Scrapy Project
+
 Before you start scraping, you will have to set up a new Scrapy project. Enter Djangos directory and run:
-```sh
+
+```shell
 scrapy startproject crawler
 ```
+
 Enter the spiders directory and let's create a new spider. Save the following code in a file named `covid19_spider.py` under the `/spiders` directory in your project:
 
 ```python
@@ -98,6 +107,7 @@ class DataSpider(scrapy.Spider):
 ```
 
 Now we have our crawled data but we need to clean it and attach it to our Django Model. So now lets go to our `items.py`
+
 ```python
 # items.py
 import scrapy
@@ -151,7 +161,9 @@ class CrawlerCovidItem(DjangoItem):
         output_processor=TakeFirst()
     )
 ```
+
 Now since we have clean our data and attached the Django Model we'll use the pipeline to save our cleaned data on the Database. Head to the `pipeline.py` file and use the following code:
+
 ```python
 from CrawledData.models import Covid
 
@@ -166,4 +178,9 @@ class DataPipeline(object):
         item.save()
         return item
 ```
-What this peace of code does is basically avoid duplications. It just updates the country if it's already created. 
+
+What this code does is basically avoid duplications. It just updates the country if it's already created. 
+
+Now for a final touch lets create `crawl` command, that will allow us to use `python manage.py crawl` command to crawl our data without the need to access to the crawler directory. 
+
+## Crawl Command
